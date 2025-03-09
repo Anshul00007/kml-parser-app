@@ -1,54 +1,100 @@
-# React + TypeScript + Vite
+ **KML Viewer - React Leaflet Application**  
+A web application that allows users to upload **KML (Keyhole Markup Language) files** and visualize geographical features such as **points, lines, and polygons** on an interactive map using **React Leaflet**.  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## **📌 Features**
+✅ Upload and parse **KML files**  
+✅ Convert **KML to GeoJSON** format  
+✅ Display **Markers, Polylines, and Polygons** dynamically  
+✅ Compute and display **summary statistics** (e.g., number of elements)  
+✅ Show **detailed analysis** (e.g., total length of line elements)  
+✅ Fit map bounds automatically to the uploaded data  
+✅ Interactive **OpenStreetMap (Leaflet) integration**  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## **🚀 Live Demo**
+_https://kmlviewer.netlify.app/_  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## **🛠️ Installation & Setup**
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/yourusername/kml-viewer.git
+cd kml-viewer
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### **2️⃣ Install Dependencies**
+```bash
+npm install
 ```
+
+### **3️⃣ Start the Development Server**
+```bash
+npm start
+```
+Then, open **`http://localhost:5173/`** in your browser.
+
+---
+
+## **📂 Project Structure**
+```
+/kml-viewer
+├── /src
+│   ├── App.jsx        # Main React Component
+│   ├── index.js       # Entry point
+│   ├── styles.css     # Styling (optional)
+│   ├── assets/        # Static assets (optional)
+│   └── components/    # Additional components (if needed)
+├── public/
+│   ├── index.html     # Main HTML file
+│   └── favicon.ico    # Icon
+├── package.json       # Dependencies & scripts
+└── README.md          # Documentation
+```
+
+---
+
+## **📌 How to Use**
+1️⃣ **Upload a KML file** by clicking the file input button.  
+2️⃣ The application **parses and converts** KML to GeoJSON.  
+3️⃣ **Geographical elements** (points, lines, polygons) will be rendered on the map.  
+4️⃣ Click **"Show Summary"** to view a breakdown of elements.  
+5️⃣ Click **"Show Detailed"** for in-depth statistics (e.g., line lengths).  
+
+---
+
+## **🗺️ Technologies Used**
+- **React** – UI framework  
+- **Leaflet** – Interactive maps  
+- **React-Leaflet** – React bindings for Leaflet  
+- **@tmcw/togeojson** – Converts KML to GeoJSON  
+- **DOMParser** – Parses XML-based KML files  
+- **OpenStreetMap** – Map tile provider  
+
+---
+
+## **⚡ Future Improvements**
+🔹 Support **Google Maps** as an alternative map provider  
+🔹 Improve **UI styling** with better tooltips & controls  
+🔹 Implement **GeoJSON file support** alongside KML  
+🔹 Allow **user-drawn polygons & lines** on the map  
+
+---
+
+## **🤝 Contributing**
+Contributions are welcome! To contribute:  
+1. Fork this repository  
+2. Create a new branch (`git checkout -b feature-branch`)  
+3. Commit your changes (`git commit -m "Added new feature"`)  
+4. Push to your branch (`git push origin feature-branch`)  
+5. Open a **Pull Request**  
+
+---
+
+## **📜 License**
+This project is open-source and available under the **MIT License**.
+
+---
